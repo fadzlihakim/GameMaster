@@ -1,4 +1,4 @@
-# GameMaster
+# QuizMaster
 
-Game Master Apps iOS development using xcode.
+Quiz Master Apps iOS development using xcode.
 Build for Clarity Techworks iOS Developer Interview
