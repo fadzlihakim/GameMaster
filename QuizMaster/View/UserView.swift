@@ -17,7 +17,7 @@ struct UserView: View {
         NavigationView{
             VStack() {
                 TextField("Enter Name", text:$userVM.name).multilineTextAlignment(.center)
-                NavigationLink(destination: GameView()){
+                NavigationLink(destination: DifficultyView()){
                     Text("Start")
                 }
 //                Button("Start") {

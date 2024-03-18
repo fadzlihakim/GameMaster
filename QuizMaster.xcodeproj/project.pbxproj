@@ -19,6 +19,9 @@
 		074BB2B72BA3F9F70081F179 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BB2B62BA3F9F70081F179 /* GameView.swift */; };
 		074BB2BC2BA7DECB0081F179 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BB2BB2BA7DECB0081F179 /* Game.swift */; };
 		074BB2BE2BA7DFAC0081F179 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074BB2BD2BA7DFAC0081F179 /* GameViewModel.swift */; };
+		07B6CA762BA818CE00DC23D0 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6CA752BA818CE00DC23D0 /* DifficultyView.swift */; };
+		07B6CA782BA81A6E00DC23D0 /* DifficultyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6CA772BA81A6E00DC23D0 /* DifficultyViewModel.swift */; };
+		07B6CA7A2BA81A9800DC23D0 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6CA792BA81A9800DC23D0 /* Difficulty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		074BB2B62BA3F9F70081F179 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		074BB2BB2BA7DECB0081F179 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		074BB2BD2BA7DFAC0081F179 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		07B6CA752BA818CE00DC23D0 /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
+		07B6CA772BA81A6E00DC23D0 /* DifficultyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewModel.swift; sourceTree = "<group>"; };
+		07B6CA792BA81A9800DC23D0 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 			children = (
 				074BB2872BA3ED2C0081F179 /* UserView.swift */,
 				074BB2B62BA3F9F70081F179 /* GameView.swift */,
+				07B6CA752BA818CE00DC23D0 /* DifficultyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 			children = (
 				074BB2B22BA3ED780081F179 /* User.swift */,
 				074BB2BB2BA7DECB0081F179 /* Game.swift */,
+				07B6CA792BA81A9800DC23D0 /* Difficulty.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			children = (
 				074BB2B42BA3ED800081F179 /* UserViewModel.swift */,
 				074BB2BD2BA7DFAC0081F179 /* GameViewModel.swift */,
+				07B6CA772BA81A6E00DC23D0 /* DifficultyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,9 +315,12 @@
 			files = (
 				074BB2882BA3ED2C0081F179 /* UserView.swift in Sources */,
 				074BB2BC2BA7DECB0081F179 /* Game.swift in Sources */,
+				07B6CA7A2BA81A9800DC23D0 /* Difficulty.swift in Sources */,
+				07B6CA782BA81A6E00DC23D0 /* DifficultyViewModel.swift in Sources */,
 				074BB2B52BA3ED800081F179 /* UserViewModel.swift in Sources */,
 				074BB2862BA3ED2C0081F179 /* QuizMasterApp.swift in Sources */,
 				074BB2B32BA3ED780081F179 /* User.swift in Sources */,
+				07B6CA762BA818CE00DC23D0 /* DifficultyView.swift in Sources */,
 				074BB2B72BA3F9F70081F179 /* GameView.swift in Sources */,
 				074BB2BE2BA7DFAC0081F179 /* GameViewModel.swift in Sources */,
 			);
