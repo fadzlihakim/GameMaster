@@ -20,22 +20,6 @@ struct UserView: View {
                 NavigationLink(destination: DifficultyView()){
                     Text("Start")
                 }
-//                Button("Start") {
-//                    if(userVM.name != ""){
-//                        //userVM.addUser(user: <#T##User#>)
-//                        //showDetails.toggle()
-//                    }
-//                    else {
-//                        showingAlert = true
-//                    }
-//                }.alert(isPresented: $showingAlert) {
-//                    Alert(title: Text("Alert"), message: Text("Insert name to start"), dismissButton: .default(Text("Got it!")))
-//                }
-//                
-//                if showDetails {
-//                    Text("Hello, \(userVM.name)")
-//                        .font(.title2)
-//                }
             }
             .padding()
         }.environmentObject(userVM)

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DifficultyView: View {
-    @ObservedObject var difficultyVM = DifficultyViewModel()
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 30){
             NavigationLink(destination: GameView(message: "easy")){
