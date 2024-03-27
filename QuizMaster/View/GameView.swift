@@ -12,8 +12,9 @@ struct GameView: View {
     @EnvironmentObject var userVM: UserViewModel
     @EnvironmentObject var gameVM: GameViewModel
     @State private var qData: [QuestionData] = []
-    @State private var resDate = [Post]()
+    @State private var resData = [Post]()
     @State private var showingAlert = false
+    @State var answer = []
     var message: String
 
     @State var timeRemaining = 100
@@ -38,43 +39,30 @@ struct GameView: View {
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(timeRemaining > 0 ? .blue : .red, lineWidth: 4)
             )
-            List {
-                ForEach(qData, id: \.self) { post in
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(.white)
-
-                        VStack {
-                            Text("\(post.question)")
-
-                            Text("\(post.correct_answer)")
+            List(qData, id: \.self) { post in
+//                answer.append(post.correct_answer)
+//                answer.append(post.incorrect_answers)
+                VStack(alignment: .leading) {
+                    Text("\(post.question)")
+                    HStack(alignment: .center) {
+                        ForEach(post.incorrect_answers, id: \.self) { wrong in
+                            Button("\(wrong)") {
+                                timeRemaining -= 5
+                                if timeRemaining < 0 { return showingAlert = true }
+                            }.alert("You lose", isPresented: $showingAlert) {
+                                NavigationLink(destination: UserView()) {
+                                    Text("Ok")
+                                }
+                            }.frame(maxWidth: .infinity).buttonStyle(.borderedProminent)
                         }
-                        .padding(20)
-                        .multilineTextAlignment(.center)
+                        Button("\(post.correct_answer)") {
+                            userVM.score += 1
+                        }.frame(maxWidth: .infinity).buttonStyle(.borderedProminent)
                     }
-                    .frame(width: 450, height: 250)
                 }
-//                VStack(alignment: .leading) {
-//                    Text("\(post.question)")
-//                    HStack(alignment: .center) {
-//                        ForEach(post.incorrect_answers, id: \.self) { wrong in
-//                            Button("\(wrong)") {
-//                                timeRemaining -= 5
-//                                if timeRemaining < 0 { return showingAlert = true }
-//                            }.alert("You lose", isPresented: $showingAlert) {
-//                                NavigationLink(destination: UserView()) {
-//                                    Text("Ok")
-//                                }
-//                            }.frame(maxWidth: .infinity).buttonStyle(.borderedProminent)
-//                        }
-//                        Button("\(post.correct_answer)") {
-//                            userVM.score += 1
-//                        }.frame(maxWidth: .infinity).buttonStyle(.borderedProminent)
-//                    }
-//                }
             }
             .onAppear {
-                fetchData { resDate in self.resDate = resDate }
+                fetchData { resData in self.resData = resData }
             }
         }.navigationBarBackButtonHidden(true)
     }
